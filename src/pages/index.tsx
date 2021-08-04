@@ -68,15 +68,19 @@ export default () => {
     }
 
     if (searchAll) {
-      navigate(`/search?q=${value}`)
-      return;
+      if (isBaidu) {
+        navigate(`https://www.baidu.com/s?wd=${value}`)
+      } else {
+        navigate(`https://www.google.com/search?q=${value}`)
+      }
+      return
     }
 
-    if (isBaidu) {
+    /*if (isBaidu) {
       window.open(`https://www.baidu.com/s?wd=${value}`);
     } else {
       window.open(`https://www.google.com/search?q=${value}`);
-    }
+    }*/
   }
 
 
