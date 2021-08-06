@@ -67,6 +67,13 @@ export default () => {
       return
     }
 
+    // 将注释去除可访问到Search组件的页面
+
+    /*if (searchAll) {
+      navigate(`/search?q=${value}`);
+      return;
+    }*/
+
     if (searchAll) {
       if (isBaidu) {
         navigate(`https://www.baidu.com/s?wd=${value}`)
